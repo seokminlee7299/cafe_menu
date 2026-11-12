@@ -1,0 +1,11 @@
+<table border="1">
+  <thead><tr><th>ID</th><th>name</th><th>price</th><th>category</th></tr></thead>
+  <tbody>
+    <% menus.forEach((item) => { %>
+      <tr><td><%= item.id %></td><td><%= item.name %></td><td><%= item.price %></td><td><%= item.category %></td></tr>
+    <% }); %>
+    <% if (menus.length === 0) { %>
+      <tr><td colspan="4">조회 결과가 없습니다.</td></tr>
+    <% } %>
+  </tbody>
+</table>
